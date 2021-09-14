@@ -13,7 +13,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project multi-kuber-practise
   - gcloud config set compute/zone asia-east1-a
-  - gcloud container clusters get-credentials multi-kuber-practise
+  - gcloud container clusters get-credentials multi-kuber-practice
   - echo "$dpass" | docker login -u "$duser" --password-stdin
   - docker build -t Anuj-nucleusteq/react-test -f ./client/Dockerfile.dev ./client
 
