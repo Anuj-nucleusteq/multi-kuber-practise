@@ -15,10 +15,10 @@ before_install:
   - gcloud config set compute/zone asia-east1-a
   - gcloud container clusters get-credentials multi-kuber-practice
   - echo "$dpass" | docker login -u "$duser" --password-stdin
-  - docker build -t Anuj-nucleusteq/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t anuj-nucleusteq/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true Anuj-nucleusteq/react-test npm test
+  - docker run -e CI=true anuj-nucleusteq/react-test npm test
 
 deploy:
   provider: script
